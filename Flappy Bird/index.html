@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Flappy Bird - Raz Trugman 305120552</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/pageStyle.css" />
+
+</head>
+
+<body>
+    <h2 id="events" class="pageHeader"></h2>
+    <div>
+        <form id="name-Form">
+            <input type="text" id="nameTextBox" placeholder="Enter you name">
+            <input type="button" id="strBtn" class="startButton" value="Start" onclick="init()" disabled>
+        </form>
+    </div>
+
+    <div style="width:800px ; height:410px ;position: relative">
+        <div><canvas id="canvas" class="gameCanvas"></canvas></div>
+
+        <div id="leaderBoardDiv" class="absolute1"></div>
+
+        <div id="winnersDiv" class="absolute2"></div>
+
+        <div id="leaderBoardHeader" class="absolute3">Leader Board</div>
+
+        <div id="winnerHeader" class="absolute4"> Winner!</div>
+
+    </div>
+
+    <br>
+    <button id="accBtn" onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.1)" disabled>ACCELERATE</button>
+    <p>Use the ACCELERATE button to stay in the air</p>
+    <p>How long can you stay alive?</p>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/static/game.js"></script>
+</body>
+
+</html>

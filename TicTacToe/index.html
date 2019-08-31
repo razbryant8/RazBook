@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>XO - Raz Trugman 305120552</title>
+
+    <link rel="stylesheet" type="text/css" href="static/pageStyle.css">
+
+</head>
+
+<body>
+    <h2 id="events" class="pageHeader"></h2>
+
+
+
+    <div id="gB" class="gameBoard">
+        Your Sign: <div id="symbol">waiting...</div>
+        <button class="sqr" id="c00"></button>
+        <button class="sqr" id="c01"></button>
+        <button class="sqr" id="c02"></button>
+        <button class="sqr" id="c10"></button>
+        <button class="sqr" id="c11"></button>
+        <button class="sqr" id="c12"></button>
+        <button class="sqr" id="c20"></button>
+        <button class="sqr" id="c21"></button>
+        <button class="sqr" id="c22"></button>
+
+        <div id="messages">Waiting for opponent to join...</div>
+        wins: <div id="num_of_wins">0</div>
+
+        <input type="button" value="Reset" class="resetGameBtn" id="resetBtn" onclick="reset()" disabled>
+    </div>
+
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="/static/game.js"></script>
+</body>
+
+</html>

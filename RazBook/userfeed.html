@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Feed</title>
+
+    <!-- Stylesheets == -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+    <link rel="icon" href="images/fav.png">
+
+
+    <!-- Scripts == -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="js/userfeed.js"></script>
+
+
+</head>
+
+<body onload="showUserName(getAllUrlParams(document.URL).myuser); showUserPosts(getAllUrlParams(document.URL).myuser);">
+
+    <!-- Header -->
+    <header id="header">
+        <nav class="navbar navbar-default navbar-fixed-top menu">
+            <div class="container">
+
+                <!-- Header Navigation -->
+                <div class="navbar-header">
+                    <a class="navbar-brand"><img src="images/logo.png" alt="logo" /></a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right main-menu">
+                        <li class="dropdown"><a onclick="goToLogin()">Disconnect</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!--Header End-->
+
+    <div id="page-contents">
+        <div class="container">
+            <div class="row">
+
+                <!-- Wall -->
+                <div class="col-md-3 static">
+                    <div class="profile-card" id="userHeader">
+                        <img src="" alt="user" class="profile-photo" />
+                        <h5><a id="userNameHeader" href="" class="text-white">
+
+
+
+                            </a></h5>
+                    </div>
+                    <!-- Search Friends -->
+                    <div class="collapse navbar-collapse" id="serch_friends">
+                        <form class="navbar-form navbar-right hidden-sm">
+                            <div class="form-group">
+                                <input type="text" id="friends_search" name="friends_search" class="form-control"
+                                    placeholder="Search friends..." onblur="this.value=''" autocomplete="off">
+                            </div>
+                            <div id="searchResult"></div>
+
+                        </form>
+
+                    </div>
+                    <div class="tools">
+                        <a href="http://localhost:5000/" target="_blank" name="flappy" id="flappy"
+                            class="btn btn-primary">Play Flappy Bird</a>
+                    </div>
+                    <div></br></div>
+                    <div class="tools">
+                        <a href="http://localhost:5001/" target="_blank" name="xo" id="xo" class="btn btn-primary">Play
+                            X-O</a>
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+
+
+                    <!-- Post Write Box  -->
+                    <div class="create-post">
+                        <div class="row">
+                            <form action="" method="POST" enctype="multipart/form-data">
+                                <div class="col-md-7 col-sm-7">
+                                    <div class="form-group">
+                                        <img src="" alt="" class="profile-photo-md" />
+                                        <textarea name="texts" id="postTextarea" name="postTextarea" cols="30" rows="1"
+                                            class="form-control" placeholder="Write your post here"
+                                            autocomplete="off"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-5">
+                                    <input type="file" id="photosToPost" name="photosToPost[]" multiple>
+                                    <div class="tools">
+
+                                        <input type="button" value="Post" name="postThePost" id="postThePost"
+                                            class="btn btn-primary pull-right"
+                                            onclick="addThePost(getAllUrlParams(document.URL).myuser, 
+                                            str_replace(' ', '%20', document.getElementById('postTextarea').value));location.reload();">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Post Content from SERVER-->
+                    <div id="PostsFromServer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="copyright">
+                <p>Raz Trugman © 2019. All rights reserved</p>
+            </div>
+        </footer>
+
+
+
+</body>
+
+</html>

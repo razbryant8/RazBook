@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <!-- Stylesheets
+    ================================================= -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/login.js"></script>
+    <link rel="icon" href="images/fav.png">
+
+
+</head>
+
+<body>
+    <section id="banner">
+        <div class="container">
+            <div class="sign-up-form">
+                <h2 class="text-white">RaZBooK</h2>
+                <div class="line-divider"></div>
+                <div class="form-wrapper">
+                    <form id="loginForm" action="login.php" method="POST" onsubmit="return loginToSite()">
+                        <fieldset class="form-group">
+                            <input type="text" class="form-control" id="usernameTF" placeholder="Enter Username"
+                                name="username" autocomplete="off">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <input type="password" class="form-control" id="passwordTF" placeholder="Enter Password"
+                                name="password" autocomplete="off">
+                        </fieldset>
+                        <div>
+                            <input type="submit" name="loginSubmit" class="btn-secondary" value="Sign In">
+                        </div>
+                </div>
+                <p></p>
+                <div>
+                    Not A Member? <a style="color: white" href="signUpPage.html">Sign Up</a> Here.
+                </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

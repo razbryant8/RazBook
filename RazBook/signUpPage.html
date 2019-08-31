@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SignUp</title>
+    <!-- Stylesheets
+    ================================================= -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="images/fav.png">
+
+    <!-- JScript
+    ================================================= -->
+    <script src="js/signUp.js"></script>
+</head>
+
+<body>
+    <!-- Top Banner
+    ================================================= -->
+    <section id="banner">
+        <div class="container">
+
+            <!-- Sign Up Form
+        ================================================= -->
+            <div class="sign-up-form">
+                <h2 class="text-white">RaZBooK</h2>
+                <div class="line-divider"></div>
+                <div class="form-wrapper">
+                    <p class="signup-text">Signup to RaZBook and connect with other people!</p>
+                    <form id="signupForm" action="signup.php" method="POST" enctype="multipart/form-data"
+                        onsubmit="return signUp()">
+                        <fieldset class="form-group">
+                            <input type="text" class="form-control" id="usernameTF" placeholder="Enter Username"
+                                name="username" autocomplete="off">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <input type="text" class="form-control" id="fullnameTF" placeholder="Enter Full Name"
+                                name="fullname" autocomplete="off">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <input type="text" id="birthdayTF" class="form-control" id="example-birthday"
+                                placeholder="Birthday DD/MM/YYYY" name="birthday" autocomplete="off">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <input type="password" class="form-control" id="passwordTF" placeholder="Enter a password"
+                                name="password" autocomplete="off">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <input type="password" class="form-control" id="confPasswordTF"
+                                placeholder="Confirm password" autocomplete="off">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <input type="file" class="form-control" id="profilePhoto" placeholder="Choose Profile Photo"
+                                name="profilePhoto" accept="Pictures/*" autocomplete="off">
+                        </fieldset>
+                        <input type="submit" name="SignUpSubmit" value="Sign Up" class="btn-secondary">
+                    </form>
+
+                </div>
+                <a style="color: white" href="loginPage.html">Already have an account?</a>
+            </div><!-- Sign Up Form End -->
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+</body>
+
+</html>
